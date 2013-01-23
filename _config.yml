@@ -26,3 +26,52 @@ navigation:
   text: Location
 - url: /2012/feedback-form
   text: Feedback
+speakers:
+- name: Daniel Fiske
+  company: Rightshift
+  title: CEO and Founder
+- name: Daniel Schauenberg
+  company: Etsy
+  title: Software Engineer
+- name: Mike Jones
+  company: Western Cape Labs
+  title: Jack of all trades
+- name: Miles Ward
+  company: Amazon
+  title: Evangelist
+- name: David Tinker
+  company: Brandseye
+  title: Title
+- name: Neil Blakey-Milner
+  company: Facebook
+  title: Production Engineer
+- name: RI Pienaar
+  company: PuppetLabs
+  title: Developer
+- name: Robert Stuttaford
+  company: Cognician
+- name: Dave Humby
+  company: Nomanini
+  title: CTO
+- name: Kenny Gryp
+  company: Percona
+sponsors:
+  gold:
+    - name: Microsoft Azure
+      about: A rock-solid cloud platform for blue-sky thinking
+    - name: RightShift
+      about: Online Gambling and Casino 
+  silver:
+    - name: Amazon
+  bronze:
+    - name: Basho
+    - name: Clickatell
+    - name: Brandseye
+  event:
+    - name: Github
+    - name: Key Connections
+    - name: RSAWeb
+
+
+
+
