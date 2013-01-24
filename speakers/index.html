@@ -1,0 +1,29 @@
+---
+layout: page
+title: Speakers
+---
+<div id="page-heading">
+    <h1>We are proud to announce the following speakers:</h1>
+</div>
+
+<ul id="speakers-section">
+
+    {% for speaker in site.speakers %}
+    <li class="box">
+        <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
+            <div class="speaker-box">
+                <img class="profile" src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' '}}.medium.jpg" />
+                <div class="caption">
+                    <ul>
+                        <li>
+                            <p><span class="name">{{ speaker.name }}</span></p>
+                            <p><span class="company">{{ speaker.company }}</p>
+                            <p><span class="title">{{ speaker.title }}</span></p> <br/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+    </li>
+    {% endfor %}
+

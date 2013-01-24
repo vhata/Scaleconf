@@ -1,0 +1,55 @@
+---
+layout: page
+title: Sponsors
+---
+<div id="page-heading">
+    <h1 class="center">A HUGE THANK YOU TO OUR <span class="bolder">SPONSORS</span> FOR 2013</h1>
+</div>
+
+<ul id="top-tier" class="tier">
+    {% for sponsor in site.sponsors.gold %}
+    <li>
+        <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
+            <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.gold.jpg" />
+        </a>
+        <p>
+            <span class="company"> <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">{{ sponsor.name }}</a></span> <br/>
+            {{ sponsor.about }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul id="second-tier" class="tier">
+    {% for sponsor in site.sponsors.silver %}
+    <li>
+        <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
+            <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.silver.jpg" />
+        </a>
+        <p>
+            <span class="company"> <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">{{ sponsor.name }}</a></span> <br/>
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul id="third-tier" class="tier">
+    {% for sponsor in site.sponsors.bronze %}
+    <li>
+        <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
+            <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.bronze.jpg" />
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul id="third-tier" class="tier">
+    {% for sponsor in site.sponsors.event %}
+    <li>
+        <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
+            <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.event.jpg" />
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
