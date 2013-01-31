@@ -197,7 +197,12 @@ div.day-schedule table tbody td.event{
 
 div.day-schedule table th.descr,
 div.day-schedule table tbody td.descr {
-    width: 400px;
+    width: 700px;
+}
+
+div.day-schedule table th.cost,
+div.day-schedule table tbody td.cost {
+    width: 100px;
 }
 
 div.day-schedule table tbody td.event img {
@@ -385,6 +390,11 @@ div.day-schedule table tbody td p {
 
 #sponsors ul#gold-sponsors {
     float: left;
+}
+
+#sponsors ul a {
+    display: block;
+    max-width: 150px;
 }
 
 /** SPEAKER PAGE @ */
@@ -759,7 +769,7 @@ ul#second-tier li {
 }
 
 ul#third-tier li {
-    width: 140px;
+    width: 200px;
     padding: 25px;
 }
 
