@@ -8,9 +8,9 @@ title: Home
     <h1>SCALECONF 2013:<span class="slogan"> BUILT TO SCALE</span></h1>
 
     <div id="mission">
-        <p class='date-venue'>18-19 April 2013: Cape Town, South Africa. </p>
+        <p class='date-venue'>April 18-19 2013: Cape Town, South Africa. </p>
         <p>Scaling code and architecture is a unique challenge that pushes us to our limits.</p>
-        <p>ScaleConf brings international and local experts together to talk about their experience building sites and services that can handle the rigors of today's internet. </p>
+        <p>ScaleConf brings international and local experts together to talk about their experience building sites and services that can handle the rigours of today's internet. </p>
     </div>
 
     <div id="target-audience">
@@ -43,10 +43,6 @@ title: Home
         <p>
             The conference itself is being held at the Kirstenbosch Botanical Gardens, a beautiful and serene setting.
         </p>
-
-         <p>
-            The conference itself is being held at the Kirstenbosch Botanical Gardens
-        </p>
     </div>
 
     <div id="speakers">
@@ -56,7 +52,7 @@ title: Home
         </p>
 
         <ul>
-            {% for speaker in site.speakers limit:2 offset:0 %}
+            {% for speaker in site.speakers limit:7 offset:0 %} {% if speaker.quote %}
             <li>
                 <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
                     <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}" />
@@ -67,11 +63,11 @@ title: Home
                     </p>
                 </a>
             </li>
-            {% endfor %}
+            {% endif %} {% endfor %}
         </ul>
 
         <ul>
-            {% for speaker in site.speakers limit:2 offset:2 %}
+            {% for speaker in site.speakers offset:7 %} {% if speaker.quote %}
             <li>
                 <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
                     <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}" />
@@ -82,14 +78,20 @@ title: Home
                     </p>
                 </a>
             </li>
-            {% endfor %}
+            {% endif %} {% endfor %}
+
+            <li id="more-speakers">
+                <a class="textlink" href="/speakers">Checkout all speakers &raquo; </a>
+                <div>
+                    {% for speaker in site.speakers limit:10 %} {% if speaker.quote == nil %}
+                    <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
+                        <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}"/>
+                    </a>
+                    {% endif %} {% endfor %}
+                </div>
+            </li>
         </ul>
 
-        <div id="speaker-bottom">
-            <div class="button">
-                <a href="/speakers">SEE MORE SPEAKERS </a>
-            </div>
-        </div>
     </div>
 </div>
 

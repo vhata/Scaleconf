@@ -3,7 +3,7 @@ layout: page
 ---
 <div id="speaker-info">
     <div id="left-column">
-        <h1 class='sponsor-level'>Speaker Bios</h1>
+        <h1 class='sponsor-level'>Speakers</h1>
 
         <ul id="speaker-list">
             {% for speaker in site.speakers %}
@@ -28,13 +28,15 @@ layout: page
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </p>
         {% endif %}
-		
-        <div id="speaker-bio">	
-            <h4>Speaker Bio</h4>
+
+        <div id="speaker-bio">
+            <h4>Bio</h4>
             <p><strong>{{ page.name }} {{ page.surname }}</strong> {{ page.bio }} </p>
             <h4>Conference Talk</h4>
-            <p> <strong> {{ page.title }} </strong> </p>
-            <p> {{ page.abstract }} </p>
+            <p> 
+                <strong> {{ page.title }} </strong> <br/>
+                {{ page.abstract }}
+            </p>
         </div>
 
     </div>
