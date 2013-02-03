@@ -26,6 +26,7 @@ p {
 
 p.padded { margin:15px 0 26px 0; }
 p.inline { display: inline-block; }
+p.two-column { display: inline-block; width:440px; vertical-align: top; padding-right: 20px; }
 span.bolder { font-weight: bold; }
 span.quote { font-family: Quicksand, Arial, Helvetica, sans-serif; }
 
@@ -259,7 +260,7 @@ div.day-schedule table tbody td p {
     width: 446px;
     margin-left: 496px;
     background-image: url(/images/bluet.png);
-    padding: 11px 15px 0px 15px;
+    padding: 11px 15px 15px 15px;
     margin-top: 30px;
 }
 
@@ -321,7 +322,7 @@ div.day-schedule table tbody td p {
     clear:left;
     width:100%;
     text-align:right;
-    padding:10px 0;
+    padding:0 0 10px 0;
     font-size:14px;
 }
 
@@ -329,7 +330,7 @@ div.day-schedule table tbody td p {
     width: 575px;
     background-color: #f5f5f6;
     margin-left: 372px;
-    padding: 12px;
+    padding: 18px 0 0 18px;
 }
 
 #bottom-content #speakers a {
@@ -350,13 +351,13 @@ div.day-schedule table tbody td p {
 }
 
 #bottom-content #speakers li {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 #bottom-content #speakers li p {
     display: inline-block;
     vertical-align: top;
-    width: 200px;
+    width: 210px;
     height: 80px;
     margin-top: 0px;
 }
@@ -391,7 +392,7 @@ div.day-schedule table tbody td p {
 
 #sponsors ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 22px;
 }
 
 #sponsors a:link, #sponsors a:hover, #sponsors a:visited {
@@ -412,15 +413,16 @@ div.day-schedule table tbody td p {
     font-weight: normal;
     font-size: 28px;
     color: #59c9e1;
-    margin-bottom: 15px;
-    margin-top: 40px;
-    margin-left: 28px;
+    margin: 40px 0 15px 0;
 }
 
-ul#speakers-section {
-    display: inline-block;
+div#speakers-section {
     padding-left: 0px;
     margin: 16px 0 0 28px;
+}
+
+div#speakers-section ul {
+    margin: 0;
 }
 
 li.box {
@@ -458,7 +460,7 @@ li.box {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
     list-style: none;
     height: 90px;
-
+    width: 180px;
 }
 
 .caption li.twitter  {
@@ -747,41 +749,14 @@ p#sponsor-details span.grey {
 
 ul.tier {
     text-align: center;
-    border-bottom: 1px dashed #999;
     padding: 0;
-    margin: 10px 0 10px 0;
+    margin: 25px 0 15px 0;
 }
 
 ul.tier li {
     display: inline-block;
+    padding:20px 30px;
 }
-
-ul.tier li p {
-    text-align: left;
-    padding: 10px 0 0 0;
-}
-
-ul.tier li p span.company {
-    color: #f7941d;
-    font-family: Quicksand, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
-ul#top-tier li {
-    width: 300px;
-    padding: 20px;
-}
-
-ul#second-tier li {
-    width: 200px;
-    padding: 15px;
-}
-
-ul#third-tier li {
-    width: 200px;
-    padding: 25px;
-}
-
 
 /**CONTACT PAGE */
 
@@ -846,14 +821,6 @@ ul#third-tier li {
 
 #schedule-page {
     margin: 0 40px;
-}
-
-#schedule-page #page-heading-schedule h1  {
-    font-family: Quicksand, Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 28px;
-    color: #59c9e1;
-    margin-top: 40px;
 }
 
 #schedule-page #intro-schedule {
