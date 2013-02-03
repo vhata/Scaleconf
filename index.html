@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Home
+name: Home
 ---
 
 <div id="top-content">
@@ -14,19 +14,23 @@ title: Home
     </div>
 
     <div id="target-audience">
-        <h2>You should be there if:</h2>
+        <h2>Included in your ticket:</h2>
         <ul>
             <li>
                 <img src="/images/bullet.png" alt="bullet" />
-                <p class="inline">You are a member of a technical team that operates a website or service for your growing customer base.</p>
+                <p class="inline">7 awesome international speakers sharing unique experiences.</p>
             </li>
             <li>
                 <img src="/images/bullet.png" alt="bullet" />
-                <p class="inline">You are involved with a team that needs to start thinking in modern ways and dealing with problems that are going to arise as your service grows.</p>
+                <p class="inline">5 African speakers sharing local perspectives and solutions.</p>
             </li>
             <li>
                 <img src="/images/bullet.png" alt="bullet" />
-                <p class="inline">You are interested in the latest technologies and ideas from some great international speakers</p>
+                <p class="inline">Evening events to network and meet like minded people.</p>
+            </li>
+            <li>
+                <img src="/images/bullet.png" alt="bullet" />
+                <p class="inline">Free workshops, and time to build and hack with new technologies and people, bringing a new perspective.</p>
             </li>
         </ul>
     </div>
@@ -52,10 +56,11 @@ title: Home
         </p>
 
         <ul>
-            {% for speaker in site.speakers limit:7 offset:0 %} {% if speaker.quote %}
+            {% for sp in site.highlighted %}
+            {% assign speaker = site.speakers[sp] %}
             <li>
-                <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
-                    <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}" />
+                <a href="/speakers/{{ sp }}" alt="/speakers/{{ sp }}">
+                    <img src="/images/speakers/{{ sp }}.small.jpg" alt="{{ site.speakers[sp].name }}" />
                     <p>
                         <span class="bolder">{{ speaker.name }}</span>
                         <br/>{{ speaker.company }}, {{ speaker.country }}<br/>
@@ -63,31 +68,19 @@ title: Home
                     </p>
                 </a>
             </li>
-            {% endif %} {% endfor %}
+        {% if forloop.index == 3 %}
         </ul>
-
         <ul>
-            {% for speaker in site.speakers offset:7 %} {% if speaker.quote %}
-            <li>
-                <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
-                    <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}" />
-                    <p>
-                        <span class="bolder">{{ speaker.name }}</span>
-                        <br/>{{ speaker.company }}, {{ speaker.country }}<br/>
-                        <span class="quote"> {{ speaker.quote }} </span>
-                    </p>
-                </a>
-            </li>
-            {% endif %} {% endfor %}
-
+        {% endif %}
+            {% endfor %}
             <li id="more-speakers">
                 <a class="textlink" href="/speakers">Checkout all speakers &raquo; </a>
                 <div>
-                    {% for speaker in site.speakers limit:10 %} {% if speaker.quote == nil %}
-                    <a href="/speakers/{{ speaker.name | downcase | replace:' ','_' }}" alt="/speakers/{{ speaker.name | downcase | replace:' ','_' }}">
-                        <img src="/images/speakers/{{ speaker.name | downcase | replace:' ','_' }}.small.jpg" alt="{{ speaker.name }}"/>
+                    {% for speaker in site.nonhighlighted %}
+                    <a href="/speakers/{{ speaker }}" alt="/speakers/{{ speaker }}">
+                        <img src="/images/speakers/{{ speaker }}.small.jpg" alt="{{ site.speakers[speaker].name }}"/>
                     </a>
-                    {% endif %} {% endfor %}
+                    {% endfor %}
                 </div>
             </li>
         </ul>
@@ -96,30 +89,25 @@ title: Home
 </div>
 
 <div id="sponsors">
-    <h2>THANKS TO OUR <a href='/sponsors'>SPONSORS</a>:</h2>
-    <ul id="gold-sponsors">
+    <ul>
         {% for sponsor in site.sponsors.gold %}
         <li>
             <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
-                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.gold.png" />
+                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.small.png" />
             </a>
         </li>
         {% endfor %}
-    </ul>
-    <ul id="silver-sponsors">
         {% for sponsor in site.sponsors.silver %}
         <li>
             <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
-                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.silver.png" />
+                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.small.png" />
             </a>
         </li>
         {% endfor %}
-    </ul>
-    <ul id="bronze-sponsors">
         {% for sponsor in site.sponsors.bronze %}
         <li>
             <a href="/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}">
-                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.bronze.png" />
+                <img src="/images/sponsors/{{ sponsor.name | downcase | replace:' ','_' }}.small.png" />
             </a>
         </li>
         {% endfor %}
