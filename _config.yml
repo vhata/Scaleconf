@@ -47,7 +47,7 @@ speakers:
         in a wide variety of projects, ranging from real-time building control
         systems, best-selling shrink-wrapped products to large-scale CRM and ERP
         systems.
-    title:
+    title: Scaling on Windows Azure
     abstract: >
         Coming soon
 
@@ -58,7 +58,7 @@ speakers:
     country: SA
     twitter: dalehumby
     bio: coming soon
-    title:
+    title: How Nomanini enables entrepreneurs in South Africa
     abstract: Coming soon
 
   daniel_fiske:
@@ -161,6 +161,7 @@ speakers:
         and analysis software. BrandsEye processes large volumes (3 million+) of
         tweets and other brand mentions every day, contextualising and annotating
         them with sentiment, credibility and so forth.
+    title: Transitioning your architecture to scale
     abstract: >
         The BrandsEye team have spent the last year or so transitioning from a
         single monolithic application with serious performance issues into a
@@ -188,6 +189,7 @@ speakers:
         is not busy shipping code, it can be assumed that Dietrich is
         hiding somewhere along the
         <a href='http://en.wikipedia.org/wiki/Current_River_(Missouri)'>Current River</a>.
+    title: Insights into NoSQL at Boundary.com
     abstract: Coming soon
 
   kenny_gryp:
@@ -196,6 +198,7 @@ speakers:
     role: Engineer
     country: USA
     bio: coming soon
+    title: High-Performance MySQL
     abstract: Coming soon
 
   mike_jones:
@@ -260,6 +263,7 @@ speakers:
     role: Production Engineering Manager
     country: USA
     twitter: nxsy
+    title: Scaling at Facebook
     bio: >
         is a Production Engineering Manager at Facebook, and previously was an early employee and lead engineer at KnowledgeTree and Yola.
     abstract: Coming soon
@@ -272,6 +276,7 @@ speakers:
     twitter: ripienaar
     bio: >
         coming soon
+    title: What DevOps isn't
     abstract: >
         Coming soon
 
@@ -330,7 +335,7 @@ programme:
       - time: 8:00 am - 9:00 am
         event: Registration
         description: Tea and coffee will be served.
-      - time: 9:00 am - 9:30 am
+      - time: 9:00 am - 9:15 am
         event: Opening
         description: A quick welcome and introduction to the conference before we get going.
       - time: 9:30 am - 10:15 am
@@ -345,36 +350,34 @@ programme:
         description: Mid-morning tea & coffee with scones and biscuits
       - time: 11:40 am - 12:25 am
         speaker: daniel_fiske
-      - time: 12:25 am - 12:30 am
-        event: Zen
-      - time: 12:30 am - 1:45 pm
+      - time: 12:30 am - 2:00 pm
         event: Lunch
         description: A buffet lunch provided by Moyo and some time to chill in the Botanical Gardens.
-      - time: 1:45 pm - 2:30 pm
+      - time: 2:00 pm - 2:45 pm
         speaker: neil_blakey_milner
-      - time: 2:30 pm - 3:00 pm
+      - time: 2:45 pm - 3:15 pm
         event: Break
         description: Afternoon tea & coffee with biscuits
-      - time: 3:00 pm - 3:45 pm
+      - time: 3:15 pm - 4:00 pm
         speaker: beat_schwegler
-      - time: 3:45 pm - 4:00 pm
+      - time: 4:00 pm - 4:15 pm
         event: Break
         event: A quick changeover & pee-break
-      - time: 4:00 pm - 4:45 pm
+      - time: 4:15 pm - 5:00 pm
         speaker: ri_pienaar
   - day: Thursday evening, 18th April
     schedule:
       - time: 6:00 pm - 11:00 pm
         event: Party
-        description:
+        description: RightShift are sponsoring the evening event, which will include pizza and drinks at a venue to be announced.
   - day: Friday, 19th April
     schedule:
       - time: 8:30 am - 9:00 am
         event: Arrival
         description: Tea and coffee will be served.
       - time: 9:00 am - 9:30 am
-        event: Words of Wisdom
-        description: 2go drop some science
+        event: The state of scaling
+        description: A representative from 2go will talk briefly on where things are for scalability in Africa.
       - time: 9:30 am - 10:15 am
         speaker: mike_jones
       - time: 10:15 am - 10:25 am
@@ -387,8 +390,6 @@ programme:
         description: Mid-morning tea & coffee with scones and biscuits
       - time: 11:40 am - 12:25 am
         speaker: robert_stuttaford
-      - time: 12:25 am - 12:30 am
-        event: Five minutes of Zen
       - time: 12:30 am - 1:45 pm
         event: Lunch
         description:
@@ -408,4 +409,4 @@ programme:
     schedule:
       - time: 6:00 pm - 11:00 pm
         event: Party
-        description: Closing party with pizza and beer provided.
+        description: Closing party with pizza and beer provided, sponsored by KeyConnections.
